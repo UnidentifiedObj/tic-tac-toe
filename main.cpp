@@ -60,7 +60,11 @@ void game() {
     std::cout << "Player 1, choose your marker (X/O): ";
     char markerP1;
     std::cin >> markerP1;
-
+    while(markerP1 != 'x' && markerP1 != 'X' && markerP1 !='o' && markerP1!='O'){
+	    std::cout<<"Invalid enter again (X/O)";
+	    std::cin>>markerP1;
+    }
+    if(markerP1 == 'x'){markerP1 = 'X';}else if (markerP1 == 'o'){markerP1 = 'O';}
     currentPlayer = 1;
     currentMarker = markerP1;
 
